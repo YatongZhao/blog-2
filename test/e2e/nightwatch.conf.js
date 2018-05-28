@@ -24,6 +24,13 @@ module.exports = {
       silent: true,
       globals: {
         devServerURL: 'http://localhost:' + (process.env.PORT || config.dev.port)
+      },
+      username: process.env.SAUCE_USERNAME,
+      access_key: process.env.SAUCE_ACCESS_KEY,
+      desiredCapabilities: {
+        build: `build-${process.env.TRAVIS_JOB_NUMBER}`,
+        public: 'public',
+        'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER
       }
     },
 
