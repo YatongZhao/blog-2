@@ -9,7 +9,7 @@ addons:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: 6ab2a2736505400d0b8ded4b6828e80de78d1bb7
+  github-token: df8f77d867d40d02dc9092f0d126b8dffb5e46af
   keep-history: true
   on:
     branch: master
