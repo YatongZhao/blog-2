@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "8"
+sudo: enabled
+addons:
+  sauce_connect: true
+  apt:
+    update: true
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: false
+  on:
+    branch: master
