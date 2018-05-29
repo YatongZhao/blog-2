@@ -14,7 +14,7 @@ deploy:
   keep-history: true
   on:
     branch: master
-after_success:
+after_deploy:
 - ssh -tt root@47.52.171.181 < ./script/deploy.sh
 before_install:
 - openssl aes-256-cbc -K $encrypted_d60a2abfc24d_key -iv $encrypted_d60a2abfc24d_iv
