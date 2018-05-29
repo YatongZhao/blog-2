@@ -19,4 +19,4 @@ after_success:
 before_install:
 - openssl aes-256-cbc -K $encrypted_91ba39662c5e_key -iv $encrypted_91ba39662c5e_iv
   -in id_rsa_deploy.enc -out ~/.ssh/id_rsa_deploy -d
-- chmod 600 ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/id_rsa_deploy
