@@ -18,5 +18,5 @@ after_success:
 - ssh -tt root@47.52.171.181 "echo 'ok...'"
 before_install:
 - openssl aes-256-cbc -K $encrypted_d60a2abfc24d_key -iv $encrypted_d60a2abfc24d_iv
-  -in id_rsa_travis.enc -out ~/.ssh/id_rsa_travis -d
-- chmod 600 ~/.ssh/id_rsa_travis
+  -in id_rsa_travis.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
