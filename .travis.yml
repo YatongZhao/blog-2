@@ -1,8 +1,9 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
 sudo: enabled
 addons:
+  ssh_known_hosts: 47.52.171.181
   sauce_connect: true
   apt:
     update: true
@@ -14,4 +15,8 @@ deploy:
   on:
     branch: master
 after_success:
-  - sh ./script/deploy.sh
+- ssh -tt root@47.52.171.181 "echo 'ok...'"
+before_install:
+- openssl aes-256-cbc -K $encrypted_d60a2abfc24d_key -iv $encrypted_d60a2abfc24d_iv
+  -in id_rsa_travis.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
